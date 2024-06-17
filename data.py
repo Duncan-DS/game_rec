@@ -26,7 +26,7 @@ def genres() :
             {"name": "", "developer": "", "Publisher": "", "Price":}
         ]
 
-    def stratergy() :
+    def strategy() :
          return [
             {"name": "", "developer": "", "Publisher": "", "Price":},
             {"name": "", "developer": "", "Publisher": "", "Price":},
@@ -151,3 +151,22 @@ def genres() :
             {"name": "", "developer": "", "Publisher": "", "Price":},
             {"name": "", "developer": "", "Publisher": "", "Price":}
         ]
+    return {
+        "action": action,
+        "adventure": adventure,
+        "rpg": rpg,
+        "strategy": strategy,
+        "simulation": simulation,
+        "sports": sports,
+        "puzzle": puzzle,
+        "horror": horror,
+        "racing": racing,
+        "sandbox": sandbox,
+        "stealth": stealth,
+        "battleroyale": battleroyale,
+        "fighter": fighter,
+        "shooter": shooter,
+        "mmorpg": mmorpg,
+        "rtstratergy": rtstratergy,
+        "survivahorror": survivahorror
+    }
