@@ -9,7 +9,7 @@ def display_games(genre_name):
     games_list = genres_dict[genre_name]()
     
     if not games_list:
-        return None, f"No games found in genre '{genre_name}'."
+        return None, f"No games found in '{genre_name}' genre."
     
     return games_list, None
 
