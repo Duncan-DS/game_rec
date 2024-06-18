@@ -65,8 +65,8 @@ def main():
                 print("\nGame Details:")
                 print(f"Name: {game_details['name']}")
                 print(f"Developer: {game_details['developer']}")
-                print(f"Publisher: {game_details['publisher']}")
-                print(f"Price: ${game_details['price']:.2f}")
+                print(f"Publisher: {game_details['Publisher']}")
+                print(f"Price: ${game_details['Price']:.2f}")
             else:
                 print(f"Game '{game_choice}' not found in genre '{genre_input}'.")
 
