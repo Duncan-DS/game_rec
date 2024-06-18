@@ -4,7 +4,7 @@ def display_games(genre_name):
     genres_dict = genres()
     
     if genre_name not in genres_dict:
-        return None, f"Genre '{genre_name}' not found."
+        return None, f"'{genre_name}' genre not found."
     
     games_list = genres_dict[genre_name]()
     
@@ -36,10 +36,10 @@ def main():
     print("Welcome to the Game-Rec App!")
 
     while True:
-        genre_input = input("Please enter a genre of your choosing to begin the program (or type 'exit' to quit): ").strip().lower()
+        genre_input = input("Please enter a genre name to start the program (or type 'exit' to quit): ").strip().lower()
         
         if genre_input == 'exit':
-            print("Farewell!")
+            print("Fairwell!")
             break
         
         games, error = display_games(genre_input)
@@ -48,12 +48,12 @@ def main():
             print(error)
             continue
 
-        print(f"Top 5 games as per IGN and Steam rankings available in the {genre_input} genre:")
+        print(f"Games available in the {genre_input} genre:")
         for idx, game in enumerate(games, start=1):
             print(f"{idx}. {game['name']}")
         
         while True:
-            game_choice = input("Please enter the name of the game you want more information about (or type 'back' to go back to the genre selection): ").strip().lower()
+            game_choice = input("Please enter the name of the game you want more information about (or type 'back' to go back to genre selection): ").strip().lower()
             
             if game_choice == 'back':
                 if back():
@@ -67,8 +67,19 @@ def main():
                 print(f"Developer: {game_details['developer']}")
                 print(f"Publisher: {game_details['Publisher']}")
                 print(f"Price: ${game_details['Price']:.2f}")
+                print("\nThank you for using the Game Information App!")
+                print("You can type 'back' to go back to the previous menu or 'exit' to quit the app.")
+
+                final_choice = input("Please enter your choice ('back' or 'exit'): ").strip().lower()
+                
+                if final_choice == 'back':
+                    if back():
+                        break
+                elif final_choice == 'exit':
+                    print("Goodbye!")
+                    return
             else:
-                print(f"Game '{game_choice}' not found in genre '{genre_input}'.")
+                print(f"'{game_choice}' game not found in '{genre_input}' genre.")
 
 if __name__ == "__main__":
     main()
