@@ -6,5 +6,8 @@ How it works:
 
     The data gatherd is from IGN and from Steam and there are some games that are not on steam, that data came from a Google search
 
-Future features:
+Flask REST API:
     TBA
+
+Future features:
+    Creating a Flask REST API Server
